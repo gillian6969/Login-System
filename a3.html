@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Transparent Login Form HTML CSS</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="navbar">
+         <ul>
+             <li><a href="#home">HOME</a></li>
+             <li><a href="#faq">FAQ</a></li>
+             <li><a href="#about">ABOUT</a></li>
+             <li><a href="#features">FEATURES</a></li>
+             <li><a href="a2.html">LOGIN</a></li>
+             <li><a href="#SIGNUP">SIGNUP</a></li>
+         </ul>
+     </div>
+      </header>
+      <div class="bg-img">
+         <div class="content">
+            <header>Sign up </header>
+            <form action="register.php" method="POST">
+               <label class="switch">
+                  <input type="checkbox" id="myCheckbox">
+                  <span class="slider"></span>
+                </label>
+               <div class="field">
+                  <span class="fa fa-user"></span>
+                  <input type="text" required name="username" placeholder="Username">
+               </div>
+               <div class="field space">
+                  <span class="fa fa-envelope"></span>
+                  <input type="email" required name="email" placeholder="Email">
+               </div>
+               <div class="field space">
+                  <span class="fa fa-phone"></span>
+                  <input type="tel" required name="contact" placeholder="Contact Number">
+               </div>
+               <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required name="password" placeholder="Password">
+                  <span class="show">SHOW</span>
+               </div>
+               <div class="field space">
+                  <span class="fa fa-lock"></span>
+                  <input type="password" class="pass-key" required name="confirm password" placeholder=" Confirm Password">
+                  <span class="show">SHOW</span>
+               </div>
+               <div class="field">
+                  <input type="submit" name="register" value="REGISTER">
+               </div>
+            </form>
+            <div class="signup" style="margin-top: 10px;">
+               Already have an account?
+               <a href="a2.html">LOGIN</a>
+            </div>
+         </div>
+      </div>
+      <script>
+         const pass_field = document.querySelector('.pass-key');
+         const showBtn = document.querySelector('.show');
+         showBtn.addEventListener('click', function(){
+          if(pass_field.type === "password"){
+            pass_field.type = "text";
+            showBtn.textContent = "HIDE";
+            showBtn.style.color = "#3498db";
+          }else{
+            pass_field.type = "password";
+            showBtn.textContent = "SHOW";
+            showBtn.style.color = "#222";
+          }
+         });
+
+         document.addEventListener('DOMContentLoaded', function () {
+         const checkbox = document.getElementById('myCheckbox');
+
+         checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+          window.location.href = 'http://localhost/fitness/a1.html';
+    }
+  });
+});
+
+      </script>
+   </body>
+</html>
